@@ -1,0 +1,61 @@
+
+<div id="top"></div>
+
+
+<div class="header-container">
+    <div class="header">
+        <div class="header-left">
+            
+            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+          
+            
+        </div>
+              
+        <div class="header-right">
+            <?php echo $this->getChildHtml('store_language') ?><?php echo $this->getChildHtml('currency') ?>
+            
+            <?php echo $this->getChildHtml('topBar') ?>
+            <div class="clear"></div>   
+            <div class="minicart-wrapper">
+                <div class="icon" onclick="location.href='<?php echo $this->getUrl('checkout/cart')?>'"></div>
+                <div class="minicart">
+                    
+                    <?php echo $this->getChildHtml('top_cart') ?>
+                    
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        <div class="clear"></div>   
+        <div class="top_links">
+                <div class="welcome-msg"><?php echo $this->getWelcome() ?></div> <?php echo $this->getChildHtml('topLinks') ?>
+        </div>
+    </div>
+    
+    
+    <?php echo $this->getChildHtml('topContainer'); ?>
+
+</div>
+</div> <? // class=page ?>
+
+<?php echo $this->getChildHtml('topMenu') ?>
+
+
+<?php
+$routeName = Mage::app()->getRequest()->getRouteName();  
+$identifier = Mage::getSingleton('cms/page')->getIdentifier();  
+   
+if($routeName == 'cms' && $identifier == 'home') {  
+    echo $this->getLayout()->createBlock('cms/block')->setBlockId('revolution_slider')->toHtml();
+    
+} else {  
+    
+} 
+?>
+
+
+
+<div class="page">
+    <?php echo $this->getChildHtml('topBread') ?>
