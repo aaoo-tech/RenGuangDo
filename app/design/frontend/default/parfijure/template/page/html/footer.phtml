@@ -1,112 +1,90 @@
 
-
+<?php if (false): ?>
 <!-- custom footer -->
 <div class="custom-footer-wrapper">
-<div class="custom-footer clearfix">
-<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('custom_footer_block')->toHtml(); ?>
-   <?php if(themeOptions('twittername')<>'') { ?>
+  <div class="custom-footer clearfix">
+  <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('custom_footer_block')->toHtml(); ?>
+  <?php if(themeOptions('twittername')<>'') { ?>
     <div class="custom-footer-column">
 
-<h1><?php echo $this->__('Twitter') ?></h1>
-<div class="header-line"></div>
-<div class="twitter-posts">
-  <script type="text/javascript">
-jQuery(document).ready(function($){
- 
- jQuery('#twitter_update_list').tweet({
- modpath: '<?php echo $this->getJsUrl('twitter/'); ?>',
- count: 3,
- username: '<?php echo themeOptions('twittername') ?>',
- template: '<div class="tweet-icon"></div><div class="text">{text}</div><div class="created">{time}</div>',
- loading_text: '<?php echo $this->__('Loading...') ?>'
-
-});
- 
-});
-</script>
-   
-  
-    <ul id="twitter_update_list"></ul>
-    <div class="follow-link"><a href="http://twitter.com/<?php echo themeOptions('twittername') ?>/"><?php echo $this->__('Follow us on Twitter') ?></a></div>
-</div>
-  </div>
-     <?php } ?>
+      <h1><?php echo $this->__('Twitter') ?></h1>
+      <div class="header-line"></div>
+      <div class="twitter-posts">
+        <script type="text/javascript">
+          jQuery(document).ready(function($){
+             jQuery('#twitter_update_list').tweet({
+              modpath: '<?php echo $this->getJsUrl('twitter/'); ?>',
+              count: 3,
+              username: '<?php echo themeOptions('twittername') ?>',
+              template: '<div class="tweet-icon"></div><div class="text">{text}</div><div class="created">{time}</div>',
+              loading_text: '<?php echo $this->__('Loading...') ?>'
+            });
+           });
+        </script>
+      
+        <ul id="twitter_update_list"></ul>
+        <div class="follow-link"><a href="http://twitter.com/<?php echo themeOptions('twittername') ?>/"><?php echo $this->__('Follow us on Twitter') ?></a></div>
+      </div>
+    </div>
+  <?php } ?>
      
 
- <?php if(themeOptions('facebookgroupid')<>'') { ?>
-<div class="custom-footer-column">
-<h1><?php echo $this->__('Facebook') ?></h1>
-<div class="header-line"></div>
+  <?php if(themeOptions('facebookgroupid')<>'') { ?>
+    <div class="custom-footer-column">
+      <h1><?php echo $this->__('Facebook') ?></h1>
+      <div class="header-line"></div>
+      <div class="facebookOuter">
+       <div class="facebookInner">
+        <div class="fb-like-box" data-href="http://www.facebook.com/pages/dx/<?php echo themeOptions('facebookgroupid') ?>" data-width="235" data-show-border="false" data-height="270" data-show-faces="true" data-colorscheme="dark" data-stream="false" data-border-color="#172332" data-header="false"></div>       
+       </div>
+      </div>
+      <div id="fb-root"></div>
 
-<div class="facebookOuter">
- <div class="facebookInner">
-  <div class="fb-like-box" data-href="http://www.facebook.com/pages/dx/<?php echo themeOptions('facebookgroupid') ?>" data-width="235" data-show-border="false" data-height="270" data-show-faces="true" data-colorscheme="dark" data-stream="false" data-border-color="#172332" data-header="false"></div>       
- </div>
-</div>
-           
-<div id="fb-root"></div>
-
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      </script>
     <!-- / Facebook -->
-    <?php } ?>
-    
+    </div>
+  <?php } ?>
+
   </div>
-
-
-
-</div>
 </div>
 <!-- / custom footer -->
+<?php endif; ?>
 
+<?php if (false): ?>
 <div class="footer-container">
-    <div class="additional-footer">
+  <div class="additional-footer">
         
     <!-- parfijure footer -->
-     <div id="footer">
-        <?php if(themeOptions('topbtn')): ?>                    
-                        <div id="message"><a href="#top" id="top-link"></a></div> 
-                    <?php endif; ?>
-   <!-- columns -->
-   <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_menu')->toHtml(); ?>
-   
+    <div id="footer">
+      <?php if(themeOptions('topbtn')): ?>                    
+        <div id="message"><a href="#top" id="top-link"></a></div> 
+      <?php endif; ?>
+      <!-- columns -->
+      <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_menu')->toHtml(); ?>
+    </div>
   </div>
-  </div>
-    
-    
-    
-    <!-- / parfijure footer -->
-    
-    
-    
-    
-    
-   
+  <!-- / parfijure footer -->
 </div>
+<?php endif; ?>
 
-
-
-
-    <div class="footer-wrapper">
-    <div class="footer">
-        <?php echo $this->getChildHtml('bottomContainer') ?>
-        <div class="footer-left">
-            <?php echo $this->getChildHtml('footer_links') ?><br />
-            <?php echo $this->getCopyright() ?>&nbsp;&nbsp;
-            <!--<?php echo $this->getChildHtml('cms_footer_links') ?>-->
-        </div>
-        <div class="footer-right">
-	    
-            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('payment_icons')->toHtml(); ?>
+<div class="footer-wrapper">
+  <div class="footer">
+    <?php echo $this->getChildHtml('bottomContainer') ?>
+    <div class="footer-left">
+      <?php echo $this->getChildHtml('footer_links') ?><br />
+      <?php echo $this->getCopyright() ?>&nbsp;&nbsp;
+      <!--<?php echo $this->getChildHtml('cms_footer_links') ?>-->
+    </div>
+    <div class="footer-right">
+      <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('payment_icons')->toHtml(); ?>
 	    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_social')->toHtml(); ?>
-	    
-        </div>
     </div>
-    </div>
+  </div>
+</div>
