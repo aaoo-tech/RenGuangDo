@@ -8,14 +8,11 @@
             <input type="button" class="quantity_box_button_down" onclick="qtyDown()" />         
             <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
             <input type="button" class="quantity_box_button_up" onclick="qtyUp()" />
-            <a class="cart-button button" onclick="jQuery('#product_addtocart_form').submit()"><?php echo $buttonTitle ?></a>
         </div>
-        
+        <div class="clear"></div>
+        <a class="cart-button button" onclick="jQuery('#product_addtocart_form').submit()"><?php echo $buttonTitle ?></a>
         <?php endif; ?>
                        
-        
-        
-        
         <?php echo $this->getChildHtml('', true, true) ?>
     </div>
     
@@ -23,10 +20,10 @@
     <a class="cart-button cart-button-grouped button" onclick="jQuery('#product_addtocart_form').submit()"><?php echo $buttonTitle ?></a>
     <?php endif; ?>
     
-    <div class="box-product-buttons">
-    <a class="buttons-compare" onclick="setLocation('<?php echo $this->getAddToCompareUrl($_product) ?>')">+ <?php echo $this->__('Compare') ?></a>
-    <a class="buttons-wish" onclick="setLocation('<?php echo $this->getAddToWishlistUrl($_product) ?>')">+ <?php echo $this->__('Wishlist') ?></a>
-    </div>
+    <!-- <div class="box-product-buttons">
+        <a class="buttons-compare" onclick="setLocation('<?php echo $this->getAddToCompareUrl($_product) ?>')">+ <?php echo $this->__('Compare') ?></a>
+        <a class="buttons-wish" onclick="setLocation('<?php echo $this->getAddToWishlistUrl($_product) ?>')">+ <?php echo $this->__('Wishlist') ?></a>
+    </div> -->
 <?php endif; ?>
 
 <script type="text/javascript">

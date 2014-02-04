@@ -1,0 +1,73 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<?php
+$_product    = $this->getProduct();
+$_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
+?>
+<?php if ($_product->isSaleable() && count($_attributes)):?>
+    <?php foreach($_attributes as $_attribute): ?>
+        <div class="configurable-entry">
+            <label class="required"><?php echo $_attribute->getLabel() ?>: </label>
+            <div class="input-box">
+                <select style="display: none;" name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
+                    <!-- <option><?php echo $this->__('Choose an Option...') ?></option> -->
+                </select>
+                <div class="options">
+                    
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+    <script type="text/javascript">
+        var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
+        (function($) {
+            $(function() {
+                var template = '<a href="#" data-val="%s">%s</a>';
+                $('.configurable-entry select').each(function(idx, val) {
+                    $options = $(this).find('option');
+                    $ctn = $(this).parent().find('>.options').empty();
+                    $.each($options, function(idx, val) {
+                        var $option = $(val);
+                        if ($option.attr('value') === '') return;
+                        $ctn.append(sprintf(template, $option.attr('value'), $option.html()));
+                    });
+                });
+
+                $('.configurable-entry .input-box > .options a').on('click', function() {
+                    var $target = $(this);
+                    $target.closest('.input-box').find('>select').val($target.data('val'));
+                    $target.parent().find('a').removeClass('on');
+                    $target.addClass('on');
+                    return false;
+                });
+
+                $('.configurable-entry .input-box > .options a:first-child').click();
+            });
+        })(jQuery);
+    </script>
+<?php endif;?>

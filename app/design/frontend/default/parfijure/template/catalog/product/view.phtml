@@ -30,9 +30,9 @@
                     <h2><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h2>
                 </div>
                 
-                <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
-                <?php echo $this->getChildHtml('alert_urls') ?>
-                <?php echo $this->getChildHtml('extrahint') ?>
+                <?php // echo $this->getReviewsSummaryHtml($_product, false, true)?>
+                <?php // echo $this->getChildHtml('alert_urls') ?>
+                <?php // echo $this->getChildHtml('extrahint') ?>
                 <?php if($_product->getTypeId() != 'bundle'): ?>
                     <?php echo $this->getPriceHtml($_product) ?>
                 <?php else: ?>
@@ -40,58 +40,51 @@
                     <?php echo $this->getChildHtml('product_type_data') ?>
                 <?php endif;?>
                 
-                <div class="addtocont">
+                <!--<div class="addtocont">
                     <?php if($_product->getTypeId() != 'bundle'): ?>
                         <span class="product-code"><?php echo $this->__('Product code:').' <strong>'.$_product->getId().'</strong>'; ?></span>
                         <?php echo $this->getChildHtml('product_type_data') ?>
                     <?php endif;?>
-                   
-                </div>
+                </div>-->
+
                 <div class="clear"></div>
-                <?php echo $this->getTierPriceHtml() ?>
+                <?php echo $this->getTierPriceHtml(); ?>
                 <?php if ($_product->getShortDescription()):?>
                     <div class="short-description">
-                        <h2><?php echo $this->__('Quick Overview:') ?></h2>
                         <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                     </div>
                 <?php endif;?>
                 <?php if(themeOptions('use_share')) { echo '<div class="review">'.themeOptions('share_code').'</div>'; } ?>
                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-            <div id="container2"><?php echo $this->getChildChildHtml('container2', '', true, true) ?></div>
-        <?php endif;?>
+                <div id="container2"><?php echo $this->getChildChildHtml('container2', '', true, true) ?></div>
+                <?php endif;?>
                 
                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                    <div id="container1"><?php echo $this->getChildChildHtml('container1', '', true, true) ?><div class="clear"></div></div>
+                <div id="container1"><?php echo $this->getChildChildHtml('container1', '', true, true) ?><div class="clear"></div></div>
                 <?php endif;?>   
-                
+
                 <?php echo $this->getChildHtml('product_type_data_grouped') ?>
                 <?php if (!$this->hasOptions()):?>
                     <div class="add-to-box">
                         <?php if($_product->isSaleable()): ?>
                             <?php echo $this->getChildHtml('addtocart') ?>
-                            
-                            
                         <?php endif; ?>
-                        
                     </div>
                 <?php endif; ?>  
                
-                
                 <?php echo $this->getChildHtml('other');?>
             </div>
-            
-                <div class="product_right">
-		    
-		    <?php if(themeOptions('upsell_position') == 0): ?>
-			<?php echo $this->getChildHtml('upsell_products') ?>
-                    <?php endif; ?>
-                    <?php if(themeOptions('related_position') == 0): ?>
-			<?php echo $this->getChildHtml('related_products') ?>
-                    <?php endif; ?>
-		    
-		    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_block')->toHtml(); ?>
-		    
-                </div>
+            <?php if (false): ?>
+            <div class="product_right">
+    		    <?php if(themeOptions('upsell_position') == 0): ?>
+    			<?php echo $this->getChildHtml('upsell_products') ?>
+                <?php endif; ?>
+                <?php if(themeOptions('related_position') == 0): ?>
+    			<?php echo $this->getChildHtml('related_products') ?>
+                <?php endif; ?>
+    		    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_block')->toHtml(); ?>
+            </div>
+            <?php endif;?>
            
         </div>
 
