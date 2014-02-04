@@ -10,7 +10,7 @@
 <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
 <?php else: ?>
 <div class="category-products">
-    <?php echo $this->getToolbarHtml() ?>
+    <?php // echo $this->getToolbarHtml() ?>
     <?php // List mode ?>
     <?php if($this->getMode()!='grid'): ?>
     <?php $_iterator = 0; ?>
@@ -20,9 +20,9 @@
         <li class="item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
             <?php include('view/labels.phtml')  ?>   
                  
-            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+            <a href="<?php echo $_eproduct->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
                 
-                <img class="fade-image" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(210,213) ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                <img class="fade-imag" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(210,213) ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
             </a>
         
              <?php // Product description ?>
@@ -87,7 +87,7 @@
     <?php $i=0; foreach ($_productCollection as $_product): ?>
      
             <li class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
-                <?php if($_product->getRatingSummary()): ?>
+                <?php if(false && $_product->getRatingSummary()): ?>
                     <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                 <?php endif; ?>
                 
@@ -98,32 +98,23 @@
 <div class="box-product-item">
 
 <div class="view-first">
-
-<div class="view-content">
-
-<div class="image">
-<a href="<?php echo $_product->getProductUrl() ?>" id="productimgover<?php echo $_product->getId()?>">
-<img class="fade-image" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(210,213) ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>"">
-</a>
-</div>
-<div class="name" id='productname<?php echo $_product->getId()?>'>
-<?php
-
- $shortenby = themeOptions('shorten_name');
-
- $product_name = $this->htmlEscape($_product->getName());
-
- mb_internal_encoding("UTF-8");
-  
- if(strlen($product_name) > $shortenby) { $product_name = mb_substr($product_name,0,$shortenby).'...'; }
-?>
-<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $product_name ?></a>
-</div>
-
-<div class="price clearfix">
-    
-<?php echo $this->getPriceHtml($_product, true) ?>
-    
+    <div class="view-content">
+        <div class="image">
+            <a href="<?php echo $_product->getProductUrl() ?>" id="productimgover<?php echo $_product->getId()?>">
+            <img class="fade-image" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(210,130) ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>">
+            </a>
+        </div>
+        <div class="name" id='productname<?php echo $_product->getId()?>'>
+        <?php
+         $shortenby = themeOptions('shorten_name');
+         $product_name = $this->htmlEscape($_product->getName());
+         mb_internal_encoding("UTF-8");
+         if(strlen($product_name) > $shortenby) { $product_name = mb_substr($product_name,0,$shortenby).'...'; }
+        ?>
+        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $product_name ?></a>
+    </div>
+    <div class="price clearfix">
+    <?php echo $this->getPriceHtml($_product, true) ?>
 </div>
 
 <?php
@@ -138,10 +129,10 @@
                             <?php }  ?>
                             
 
-<div class="box-product-buttons">
-    <a class="buttons-compare" onclick="setLocation('<?php echo $this->getAddToCompareUrl($_product) ?>')">+ <?php echo $this->__('Compare') ?></a>
-    <a class="buttons-wish" onclick="setLocation('<?php echo $this->getAddToWishlistUrl($_product) ?>')">+ <?php echo $this->__('Wishlist') ?></a>
-</div>
+    <!-- <div class="box-product-buttons">
+        <a class="buttons-compare" onclick="setLocation('<?php echo $this->getAddToCompareUrl($_product) ?>')">+ <?php echo $this->__('Compare') ?></a>
+        <a class="buttons-wish" onclick="setLocation('<?php echo $this->getAddToWishlistUrl($_product) ?>')">+ <?php echo $this->__('Wishlist') ?></a>
+    </div> -->
 </div>
 
 
@@ -248,7 +239,7 @@
         
         </script>
     <div class="toolbar-bottom">
-        <?php echo $this->getToolbarHtml() ?>
+        <?php // echo $this->getToolbarHtml() ?>
     </div>
 </div>
 <?php endif; ?>
