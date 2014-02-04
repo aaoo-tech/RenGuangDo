@@ -17,6 +17,7 @@ ln -s $themefolder/js/jquery $magefolder/js/jquery
 ln -s $themefolder/js/lightbox $magefolder/js/lightbox
 ln -s $themefolder/js/revolution $magefolder/js/revolution
 ln -s $themefolder/js/slideshow $magefolder/js/slideshow
+ln -s $themefolder/js/sprintf $magefolder/js/sprintf
 ln -s $themefolder/js/twitter $magefolder/js/twitter
 mv $magefolder/js/varien/menu.js $magefolder/js/varien/menu.js.old
 ln -s $themefolder/js/varien/menu.js $magefolder/js/varien/menu.js
