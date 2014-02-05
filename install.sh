@@ -23,6 +23,7 @@ mv $magefolder/js/varien/menu.js $magefolder/js/varien/menu.js.old
 ln -s $themefolder/js/varien/menu.js $magefolder/js/varien/menu.js
 ln -s $themefolder/js/varien/script.js $magefolder/js/varien/script.js
 ln -s $themefolder/js/zoom $magefolder/js/zoom
+ln -s $themefolder/js/event.simulate.js $magefolder/js/event.simluate.js
 
 ln -s $themefolder/lib/Varien/Data/Form/Element/Color.php $magefolder/lib/Varien/Data/Form/Element/Color.php
 
@@ -30,4 +31,4 @@ mkdir $themefolder/media/wysiwyg
 ln -s $themefolder/media/wysiwyg/parfijure $magefolder/media/wysiwyg/parfijure
 
 ln -s $themefolder/skin/adminhtml/default/default/colorpicker.css $magefolder/skin/adminhtml/default/default/colorpicker.css
-ln -s $themefolder/skin/frontend/default/parfijure $magefolder/skin/frontend/default/parfijure
+ln -s $themefolder/skin/frontend/default/parfijure $magefolder/skin/frontend/default/parfijure†

@@ -27,7 +27,7 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>mage/cookies.js</script></action>
                 <action method="addJs"><script>jquery/func.js</script></action>
                 <action method="addJs"><script>sprintf/sprintf.js</script></action>
-               
+                <action method="addJs"><script>event.simulate.js</script></action>
 
                 <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/responsive.css</stylesheet></action>

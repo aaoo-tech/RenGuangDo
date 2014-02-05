@@ -45,6 +45,10 @@ $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
     <?php endforeach; ?>
     <script type="text/javascript">
         var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
+        var selectChange = function(selector) {
+            $(selector).simulate('change');
+        };
+
         (function($) {
             $(function() {
                 var template = '<a href="#" data-val="%s">%s</a>';
@@ -61,6 +65,7 @@ $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
                 $('.configurable-entry .input-box > .options a').on('click', function() {
                     var $target = $(this);
                     $target.closest('.input-box').find('>select').val($target.data('val'));
+                    selectChange($target.closest('.input-box').find('>select').attr('id'));
                     $target.parent().find('a').removeClass('on');
                     $target.addClass('on');
                     return false;
