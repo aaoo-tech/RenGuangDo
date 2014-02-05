@@ -8,7 +8,7 @@ cp -r $themefolder/app/code/local/* $magefolder/app/code/local/
 ln -s $themefolder/app/design/adminhtml/default/default/layout/options.xml $magefolder/app/design/adminhtml/default/default/layout/options.xml
 ln -s $themefolder/app/design/frontend/default/parfijure $magefolder/app/design/frontend/default/parfijure
 cp $themefolder/app/etc/modules/Excellence_Ajax.xml $magefolder/app/etc/modules/Excellence_Ajax.xml
-cp $themefolder/app/etc/modules/ThemeAdminPanel_All $magefolder/app/etc/modules/ThemeAdminPanel_All.xml
+cp $themefolder/app/etc/modules/ThemeAdminPanel_All.xml $magefolder/app/etc/modules/ThemeAdminPanel_All.xml
 
 ln -s $themefolder/js/colorpicker $magefolder/js/colorpicker
 ln -s $themefolder/js/easing $magefolder/js/easing
@@ -26,6 +26,7 @@ ln -s $themefolder/js/zoom $magefolder/js/zoom
 
 ln -s $themefolder/lib/Varien/Data/Form/Element/Color.php $magefolder/lib/Varien/Data/Form/Element/Color.php
 
+mkdir $themefolder/media/wysiwyg
 ln -s $themefolder/media/wysiwyg/parfijure $magefolder/media/wysiwyg/parfijure
 
 ln -s $themefolder/skin/adminhtml/default/default/colorpicker.css $magefolder/skin/adminhtml/default/default/colorpicker.css
