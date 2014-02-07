@@ -276,7 +276,7 @@ ul, ol {
 .col3-set .col-2 {
 	float: left;
 	width: 32%;
-	margin-left: 2%;
+	/* margin-left: 2%; */
 	border:1px solid #F5F5F5;
 	
 }
@@ -416,7 +416,7 @@ p.control input.checkbox, p.control input.radio {
 }
 
 .form-list li {
-	margin: 0 0 10px;
+	margin: 0 0 15px;
 }
 .form-list label {
 	float: left;
@@ -424,7 +424,7 @@ p.control input.checkbox, p.control input.radio {
 	font-weight: bold;
 	position: relative;
 	z-index: 0;
-	margin: 0 0 5px;
+	margin: 0 0 8px;
 }
 .form-list label.required {
 }
@@ -975,8 +975,9 @@ p.required {
 	background: #fefefe;
 }
 .data-table tr.last th, .data-table tr.last td {
-	padding-top:10px;
+	padding-top: 10px;
 	padding-bottom:10px;
+	/* vertical-align: middle; */
 }
 .data-table tbody th, .data-table tbody td.a-right .price-box {
 	text-align:right;
@@ -3498,6 +3499,7 @@ span.currency-code {
 }
 .product-view .product-shop .grouped-items-table .quantity_box_button_up, #shopping-cart-table .quantity_box_button_up {
 	float: left;
+	/* margin-top: 4px; */
 }
 .product-view .product-shop .grouped-items-table .qty {
 	float: left;
@@ -4208,7 +4210,7 @@ h2.product-name {
 	color: #090909;
 }
 .cart .discount .discount-form, .cart .shipping .shipping-form {
-	padding: 15px;
+	padding: 15px 10px;
 }
 .cart .discount .buttons-set, .cart .shipping .buttons-set {
 	margin: 10px 0 0;
@@ -4229,7 +4231,7 @@ h2.product-name {
 	width: 265px;
 }
 .cart .shipping p {
-	margin: 0 0 3px;
+	margin: 0 0 10px;
 }
 .cart .shipping .sp-methods {
 	margin: 10px 0 0;
@@ -4255,7 +4257,7 @@ h2.product-name {
 	margin: 0 0 8px;
 }
 .cart .totals td {
-	padding: 0 0 0 15px;
+	padding: 5px 0 5px 15px;
 }
 .cart .totals tr.last td {
 }
@@ -4286,7 +4288,7 @@ h2.product-name {
 	font-style: italic;
 }
 .item-options dd {
-	padding-left: 10px;
+	/* padding-left: 10px; */
 }
 .truncated {
 	cursor: help;
@@ -6633,3 +6635,16 @@ h1.products-block-header {
 .new-products p, .sale-products p {
 	margin: 0;
 }
+
+.checkout-cart-index h1 { color: #696969; }
+.checkout-cart-index #shopping-cart-table .input-text.qty { padding: 7px 5px; }
+.checkout-cart-index #shopping-cart-table .cart-price { color: #f05a49; }
+.checkout-cart-index #shopping-cart-table td.item-product-img,
+.checkout-cart-index #shopping-cart-table td.item-product-name,
+.checkout-cart-index #shopping-cart-table td.item-product-size,
+.checkout-cart-index #shopping-cart-table td.item-product-price,
+.checkout-cart-index #shopping-cart-table td.item-product-totals {
+	padding-top: 18px;
+}
+.checkout-cart-index .checkout-types a { color: #dedede; }
+.checkout-cart-index .checkout-types a:hover { color: #999; text-decoration: underline; }
