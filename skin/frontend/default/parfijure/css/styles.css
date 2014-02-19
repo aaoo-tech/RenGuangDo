@@ -1204,7 +1204,7 @@ tr.summary-details-excluded {
 	position: relative;
 }
 .links > li:after { content: '|'; padding: 0 11px;}
-.links > li:last-child:after { content: ''; }
+.links > li:last-child:after { content: ''; padding: 0; }
 .links > li.first {
 	padding-left: 0 !important;
 }
