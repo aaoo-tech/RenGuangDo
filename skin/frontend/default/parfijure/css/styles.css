@@ -6228,7 +6228,8 @@ h1.products-block-header {
 .shop-about .text p { float: right; width: 430px; color: #989898; line-height: 20px;}
 .shop-about .newsletter .form-holder { margin-top: 35px; }
 .shop-about .newsletter input[type="email"] { width: 80%; border: 1px solid #989083; padding: 5px 20px; box-sizing: border-box; font-size: 13px;}
-.shop-about .newsletter button { margin-top: 25px; width: 80%;  padding: 9px 20px; background-color: #776058; color: #fff; text-transform: uppercase; border: none;}
+.shop-about .newsletter button { margin-top: 25px; width: 80%;  padding: 9px 20px; background-color: #776058; color: #fff; text-transform: uppercase; border: none; cursor: pointer;}
+.shop-about .newsletter button:hover { opacity: 0.8; }
 
 .shop-news {
 	margin-top:10px;
