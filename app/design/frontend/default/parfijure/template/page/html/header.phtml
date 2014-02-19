@@ -30,7 +30,20 @@
                 <ul class="links">
                     <li class="first"><a href="#"><?php echo $this->__('About Us');?></a></li>
                     <li><a href="#"><?php echo $this->__('Brand Vision');?></a></li>
-                    <li><a href="<?php echo $this->getUrl('apparel.html'); ?>"><?php echo $this->__('Products');?></a></li>
+                    <li>
+                        <a href="#"><?php echo $this->__('Products');?></a>
+                        <div class="level2">
+                            <ul>
+                                <li><a href="<?php echo $this->getUrl('/catalog/category/view', array('id'=>3)); ?>">潤之智</a></li>
+                                <li><a href="#">調養之智</a></li>
+                                <li><a href="#">淨之智</a></li>
+                                <li><a href="#">亮之智</a></li>
+                                <li><a href="#">昇華之智</a></li>
+                                <li><a href="#">美髮之智</a></li>
+                                <li><a href="#">養身之智</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="#"><?php echo $this->__('Skin Care Basics');?></a></li>
                     <li><a href="#"><?php echo $this->__('Member');?></a></li>
                     <li><a href="#"><?php echo $this->__('Press Coverage');?></a></li>
@@ -54,9 +67,7 @@ $identifier = Mage::getSingleton('cms/page')->getIdentifier();
    
 if($routeName == 'cms' && $identifier == 'home') {  
     echo $this->getLayout()->createBlock('cms/block')->setBlockId('revolution_slider')->toHtml();
-    
 } else {  
-    
 } 
 ?>
 

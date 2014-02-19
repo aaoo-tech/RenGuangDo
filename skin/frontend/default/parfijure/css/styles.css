@@ -1162,11 +1162,11 @@ tr.summary-details-excluded {
 	color:#686161;
 	
 }
-.header  .links li {
+.header .links > li {
 	margin-top:10px;
 }
 
-#header_menu .links li a {
+#header_menu .links > li > a {
 	color: #716e6e;
 	padding:0px 24px 0px 0px;
 	display: inline-block;
@@ -1174,10 +1174,10 @@ tr.summary-details-excluded {
 	border-right:1px solid #d6d9d7;
 	margin-top:7px;
 }
-#header_menu .links li a:hover {
+#header_menu .links > li > a:hover {
 	text-decoration:underline;
 }
-#header_menu .links .last a {
+#header_menu .links > .last > a {
 	padding-right:10px;
 	border-right:none;
 }
@@ -1199,17 +1199,16 @@ tr.summary-details-excluded {
 	width:980px;
 	margin:0 auto;
 }
-.links li {
+.links > li {
 	display: inline;
-	/* padding: 1px 10px 1px 5px; */
-	
+	position: relative;
 }
-.links li:after { content: '|'; padding: 0 11px;}
-.links li:last-child:after { content: ''; }
-.links li.first {
+.links > li:after { content: '|'; padding: 0 11px;}
+.links > li:last-child:after { content: ''; }
+.links > li.first {
 	padding-left: 0 !important;
 }
-.links li.last {
+.links > li.last {
 	background: none !important;
 	padding-right: 0 !important;
 }
@@ -1339,13 +1338,20 @@ tr.summary-details-excluded {
 	margin-bottom:20px;
 	display:block;
 }
-.header .top_links a {
+.header .top_links .links > li > a {
 	/* background: url("../images/header-li-bullet.png") no-repeat left center; */
 	/* padding-left:15px; */
 	/* margin-left:10px; */
 	color:#030303;
 	font-size:12px;
+	display: inline-block;
 }
+.header .top_links .links > li .level2 { display: none; position: absolute; left: -18px; top: 13px; z-index: 1000; padding-top: 10px; /* box-shadow: #000 1px 1px 1px; */}
+.header .top_links .links > li .level2 ul { background: #fff; border: 1px solid #ddd; width: 200%; text-align: left; min-width: 130px; box-shadow: #ddd 1px 1px 1px;}
+.header .top_links .links > li .level2 ul > li:hover { }
+.header .top_links .links > li .level2 ul > li > a { display: block; color: #030303; padding: 10px 15px; }
+.header .top_links .links > li .level2 ul > li > a:hover { background: #776058; color: #fff; text-decoration: none; }
+
 .header #search_autocomplete {
 	margin: 15px 0 0 0;
 }
@@ -3130,6 +3136,7 @@ span.currency-code {
 	margin: 0;
 }
 .product-collateral {
+    /* margin-top: 25px; */
 }
 .product-collateral h2 {
 	font-size: 19px;
@@ -3224,6 +3231,7 @@ span.currency-code {
 	position: absolute;
 	top: 315px;
 	left: 10px;
+	display: none;
 }
 .product-view .product-img-box .main-image .lightbox-btn a {
 	text-indent: -9999px;

@@ -208,12 +208,12 @@
 /* left arrow */
 .more-views-arrow.prev {
 	left: 0;
-	top:397px;
+	top: 360px;
 }
 /* right arrow */
 .more-views-arrow.next {
 	right: 5px;
-	top:397px;
+	top: 360px;
 }
 
 
