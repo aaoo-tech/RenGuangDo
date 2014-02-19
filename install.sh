@@ -9,6 +9,7 @@ ln -s $themefolder/app/design/adminhtml/default/default/layout/options.xml $mage
 ln -s $themefolder/app/design/frontend/default/parfijure $magefolder/app/design/frontend/default/parfijure
 cp $themefolder/app/etc/modules/Excellence_Ajax.xml $magefolder/app/etc/modules/Excellence_Ajax.xml
 cp $themefolder/app/etc/modules/ThemeAdminPanel_All.xml $magefolder/app/etc/modules/ThemeAdminPanel_All.xml
+ln -s $themefolder/app/locale/zh_HK $magefolder/app/locale/zh_HK
 
 ln -s $themefolder/js/colorpicker $magefolder/js/colorpicker
 ln -s $themefolder/js/easing $magefolder/js/easing
