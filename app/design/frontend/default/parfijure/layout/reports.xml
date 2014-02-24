@@ -38,8 +38,8 @@
     <catalog_category_layered_nochildren translate="label">
         <label>Catalog Category (Without Subcategories)</label>
         <remove name="right.reports.product.viewed" />
-        <reference name="right">
+        <!-- <reference name="right">
             <block type="reports/product_viewed" before="right.permanent.callout" name="left.reports.product.viewed" template="reports/product_viewed.phtml" />
-        </reference>
+        </reference> -->
     </catalog_category_layered_nochildren>
 </layout>
