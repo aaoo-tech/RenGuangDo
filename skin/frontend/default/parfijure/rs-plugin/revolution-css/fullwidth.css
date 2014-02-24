@@ -7,23 +7,21 @@
 
 
 .fullwidthbanner-container{
-       width:950px;
-       position:relative;
-       padding:0;
-       overflow:hidden;
-       margin-left: auto;
-       margin-right: auto;
-       margin-bottom:30px;
+  width:950px;
+  position:relative;
+  padding:0;
+  overflow:hidden;
+  margin: 0 auto 30px;
 }
 
 
 .revolution_header1 {
-       color:#ec5d4c;
-       font-size:48px;
-       text-align:left;
-       font-weight:bold;
-       text-transform: uppercase;
-       line-height: 40px;
+  color:#ec5d4c;
+  font-size:48px;
+  text-align:left;
+  font-weight:bold;
+  text-transform: uppercase;
+  line-height: 40px;
 }
 .revolution_header1 strong {
        color:#4d94eb;
