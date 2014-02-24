@@ -289,6 +289,8 @@ One page checkout main layout
         </reference>
         <reference name="right">
             <action method="unsetChildren"></action>
+            <block type="cms/block" name="cms_sidebar_category"><action method="setBlockId"><block_id>sidebar-category</block_id></action></block>
+            <block type="cms/block" name="cms_sidebar_ad"><action method="setBlockId"><block_id>sidebar-ad</block_id></action></block>
             <!-- <block type="page/html_wrapper" name="checkout.progress.wrapper" translate="label">
                 <label>Checkout Progress Wrapper</label>
                 <action method="setElementId"><value>checkout-progress-wrapper</value></action>
