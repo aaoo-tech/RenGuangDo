@@ -28,8 +28,15 @@
             <div class="top_links">
                 <!-- <div class="welcome-msg"><?php echo $this->getWelcome() ?></div>  -->
                 <ul class="links">
-                    <li class="first"><a href="#"><?php echo $this->__('About Us');?></a></li>
-                    <li><a href="#"><?php echo $this->__('Brand Vision');?></a></li>
+                    <li class="first">
+                        <a href="#"><?php echo $this->__('About Us');?></a>
+                        <div class="level2">
+                            <ul>
+                                <li><a href="#">茶花經典</a></li>
+                                <li><a href="#">美學理念</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li>
                         <a href="#"><?php echo $this->__('Products');?></a>
                         <div class="level2">
@@ -44,10 +51,26 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#"><?php echo $this->__('Skin Care Basics');?></a></li>
-                    <li><a href="#"><?php echo $this->__('Member');?></a></li>
+                    <li>
+                        <a href="#"><?php echo $this->__('Skin Care Basics');?></a>
+                        <div class="level2">
+                            <ul>
+                                <li><a href="#">基本護理</a></li>
+                                <li><a href="#">深度護理</a></li>
+                                <li><a href="#">特別護理</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="#"><?php echo $this->__('Press Coverage');?></a></li>
-                    <li><a href="#"><?php echo $this->__('Retail Points');?></a></li>
+                    <li>
+                        <a href="#"><?php echo $this->__('Member');?></a>
+                        <div class="level2">
+                            <ul>
+                                <li><a href="#">成為VIP</a></li>
+                                <li><a href="#">專屬優惠</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li class="last"><a href="#"><?php echo $this->__('Contact'); ?></a></li>
                 </ul>
                 <!--<?php echo $this->getChildHtml('topLinks') ?>-->
