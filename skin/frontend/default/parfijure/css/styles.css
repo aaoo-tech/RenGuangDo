@@ -147,7 +147,8 @@ ul, ol {
 	white-space: normal !important;
 }
 .main-container {
-	margin-bottom:15px;
+	width: 950px;
+	margin: 0 auto 15px;
 }
 .a-left {
 	text-align: left !important;
@@ -194,12 +195,12 @@ ul, ol {
 	clear: both!important;
 }
 
-
 .page {
-	width: 950px;
 	margin: 0 auto;
 	text-align: left;
 }
+.wrapper > .page:nth-of-type(1) { box-shadow: 0 10px 30px -3px #ddd; margin-bottom: 50px;}
+
 .page-print {
 	background: #fff;
 	padding: 25px 30px;
@@ -701,13 +702,11 @@ p.required {
 	color: #ec3331;
 }
 .top-bread {
-	margin-bottom:10px;
+	width: 950px;
+	/* margin-bottom:10px; */
+	margin: 0 auto 10px;
 }
-.breadcrumbs {
-	margin: 11px 0 0 0;
-	margin-left:10px;
-	
-}
+.breadcrumbs { margin: 11px 0 0 0; }
 .breadcrumbs li {
 	display: inline;
 }
@@ -1313,7 +1312,7 @@ tr.summary-details-excluded {
 	margin: 0px;
 }
 .header {
-	padding: 15px 0 15px 0;
+	padding: 15px 0 0 0;
 }
 .welcome-msg {
 	
@@ -6624,7 +6623,7 @@ transition: all 200ms ease-in-out 0s;
 }
 
 .wrapper {
-	width:1000px;
+	width: 1000px;
 	margin: 28px auto;
 	background:#fff;
 	/* margin-top:28px; */
@@ -6665,3 +6664,11 @@ transition: all 200ms ease-in-out 0s;
 }
 .checkout-cart-index .checkout-types a { color: #dedede; }
 .checkout-cart-index .checkout-types a:hover { color: #999; text-decoration: underline; }
+
+.cms-page-view .std { margin: 50px; }
+.cms-page-view h1 { color: #9c8983; }
+.cms-contact-us-html .map { border: 1px solid #ddd; padding: 25px; margin: 20px 0 40px; position: relative; }
+.cms-contact-us-html .map .down-arrow { position: absolute; bottom: -21px; left: 60px; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #ddd;}
+.cms-contact-us-html .map .down-arrow .inner { width: 0; height: 0; border-left: 19px solid transparent; border-right: 19px solid transparent; border-top: 19px solid #fff; position: absolute; top: -21px; left: -19px; }
+.cms-contact-us-html .infos address { background: url('../images/icon-spot.jpg') 0 -3px no-repeat #fff; }
+.cms-contact-us-html .infos address { width: 48%; padding-left: 50px; box-sizing: border-box; line-height: 23px;}
