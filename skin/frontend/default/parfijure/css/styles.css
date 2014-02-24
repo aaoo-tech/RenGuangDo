@@ -1338,6 +1338,7 @@ tr.summary-details-excluded {
 	margin-bottom:20px;
 	display:block;
 }
+.header .header-left a.logo img { width: 118px; height: 67px; }
 .header .top_links .links > li > a {
 	/* background: url("../images/header-li-bullet.png") no-repeat left center; */
 	/* padding-left:15px; */
