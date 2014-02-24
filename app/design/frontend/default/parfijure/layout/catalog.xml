@@ -109,8 +109,10 @@ Category default layout
             <block type="catalog/leftnavigation" name="catalog.leftnav2" before="currency" template="catalog/navigation/leftnav.phtml"/>
         </reference>
         <reference name="right">
-            <block type="catalog/navigation" name="catalog.leftnav" after="catalog.leftnav2" template="catalog/navigation/left.phtml"/>
-            <block type="catalog/leftnavigation" name="catalog.leftnav2" before="currency" template="catalog/navigation/leftnav.phtml"/>
+            <!-- <block type="catalog/navigation" name="catalog.leftnav" after="catalog.leftnav2" template="catalog/navigation/left.phtml"/>
+            <block type="catalog/leftnavigation" name="catalog.leftnav2" before="currency" template="catalog/navigation/leftnav.phtml"/> -->
+            <block type="cms/block" name="cms_sidebar_category"><action method="setBlockId"><block_id>sidebar-category</block_id></action></block>
+            <block type="cms/block" name="cms_sidebar_ad"><action method="setBlockId"><block_id>sidebar-ad</block_id></action></block>
         </reference>
         <reference name="content">
             <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
@@ -152,9 +154,12 @@ Category layered navigation layout
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
         </reference>
-	<reference name="right">
-            <block type="catalog/navigation" name="catalog.leftnav" after="catalog.leftnav2" template="catalog/navigation/left.phtml"/>
-            <block type="catalog/leftnavigation" name="catalog.leftnav2" before="currency" template="catalog/navigation/leftnav.phtml"/>
+    	<reference name="right">
+            <!-- <block type="catalog/navigation" name="catalog.leftnav" after="catalog.leftnav2" template="catalog/navigation/left.phtml"/>
+            <block type="catalog/leftnavigation" name="catalog.leftnav2" before="currency" template="catalog/navigation/leftnav.phtml"/> -->
+            <block type="cms/block" name="cms_sidebar_category">
+                <action method="setBlockId"><block_id>sidebar-category</block_id></action>
+            </block>
        </reference>
         <reference name="left">
             <block type="catalog/layer_view" name="catalog.leftnav" after="catalog.leftnav2" template="catalog/layer/view.phtml"/>
