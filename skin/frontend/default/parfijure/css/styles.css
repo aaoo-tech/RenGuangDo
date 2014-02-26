@@ -1202,8 +1202,8 @@ tr.summary-details-excluded {
 	display: inline;
 	position: relative;
 }
-.links > li:after { content: '|'; padding: 0 25px;}
-.links > li:last-child:after { content: ''; padding: 0; }
+.top_links .links > li:after { content: '|'; padding: 0 25px;}
+.top_links .links > li:last-child:after { content: ''; padding: 0; }
 .links > li.first {
 	padding-left: 0 !important;
 }
@@ -1338,18 +1338,11 @@ tr.summary-details-excluded {
 	display:block;
 }
 .header .header-left a.logo img { width: 118px; height: 67px; }
-.header .top_links .links > li > a {
-	/* background: url("../images/header-li-bullet.png") no-repeat left center; */
-	/* padding-left:15px; */
-	/* margin-left:10px; */
-	color:#030303;
-	font-size:12px;
-	display: inline-block;
-}
+.header .top_links .links > li > a { color:#030303; font-size:16px; display: inline-block; }
 .header .top_links .links > li .level2 { display: none; position: absolute; left: -32px; top: 13px; z-index: 1000; padding-top: 10px; /* box-shadow: #000 1px 1px 1px; */}
 .header .top_links .links > li .level2 ul { background: #fff; border: 1px solid #ddd; width: 200%; text-align: left; min-width: 130px; box-shadow: #ddd 1px 1px 1px;}
 .header .top_links .links > li .level2 ul > li:hover { }
-.header .top_links .links > li .level2 ul > li > a { display: block; color: #030303; padding: 10px 15px; }
+.header .top_links .links > li .level2 ul > li > a { display: block; color: #030303; padding: 10px 15px; font-size: 16px; }
 .header .top_links .links > li .level2 ul > li > a:hover { background: #776058; color: #fff; text-decoration: none; }
 
 .header #search_autocomplete {
@@ -1359,7 +1352,7 @@ tr.summary-details-excluded {
 .top_links {
 	/* text-align:right; */
 	padding-top: 50px;
-	padding-left: 50px;
+	padding-left: 30px;
 }
 
 .currency-code {
@@ -6228,7 +6221,7 @@ h1.products-block-header {
 .shop-about .text p { float: right; width: 430px; color: #989898; line-height: 20px;}
 .shop-about .newsletter .form-holder { margin-top: 35px; }
 .shop-about .newsletter input[type="email"] { width: 80%; border: 1px solid #989083; padding: 5px 20px; box-sizing: border-box; font-size: 13px;}
-.shop-about .newsletter button { margin-top: 25px; width: 80%;  padding: 9px 20px; background-color: #776058; color: #fff; text-transform: uppercase; border: none; cursor: pointer;
+.shop-about .newsletter button { margin-top: 15px; width: 80%;  padding: 9px 20px; background-color: #776058; color: #fff; text-transform: uppercase; border: none; cursor: pointer;
 transition: all 200ms ease-in-out 0s;
 -webkit-transition: all 200ms ease-in-out 0s;
 -moz-transition: all 200ms ease-in-out 0s;
