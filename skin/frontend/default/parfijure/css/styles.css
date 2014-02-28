@@ -5676,16 +5676,11 @@ margin:0;
 	color: #989083;
 	text-decoration:underline;
 }
-.footer .links li a:hover {
-	text-decoration:none;
-}
-.footer-container a {
-	color: #666669;
+.footer .links li a:hover { text-decoration: none; }
+.footer-container a { color: #666669; }
+.footer a { color: #989083; }
+.footer a:hover { text-decoration: underline; }
 
-}
-.footer a:hover {
-	color:#fff;
-}
 .footer-container .footer-right {
 	width: 250px;
 }
