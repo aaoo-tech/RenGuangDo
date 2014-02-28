@@ -495,7 +495,7 @@ website:   	http://www.themepunch.com
 															-khtml-opacity: 1;
 															opacity: 1;
 															-webkit-transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;
-
+															display: none;
 														}
 .tparrows.hidearrows									{
 															-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
