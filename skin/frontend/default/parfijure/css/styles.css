@@ -1202,7 +1202,7 @@ tr.summary-details-excluded {
 	display: inline;
 	position: relative;
 }
-.top_links .links > li:after { content: '|'; padding: 0 25px;}
+.top_links .links > li:after { content: '|'; padding: 0 18px;}
 .top_links .links > li:last-child:after { content: ''; padding: 0; }
 .links > li.first {
 	padding-left: 0 !important;
