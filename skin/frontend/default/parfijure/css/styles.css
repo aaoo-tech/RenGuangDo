@@ -6218,6 +6218,8 @@ transition: all 200ms ease-in-out 0s;
 -o-transition: all 200ms ease-in-out 0s;
 }
 .shop-about .newsletter button:hover { opacity: 0.8; }
+.shop-about .social-buttons { margin-top: 15px; text-align: right; }
+.shop-about .social-buttons a img { width: 32px; height: 32px; }
 
 .shop-news {
 	margin-top:10px;
