@@ -6193,16 +6193,10 @@ h1.products-block-header {
 	margin-bottom: 4px;
 }
 
-.shop-about {
-	color:#000000;
-	text-align:left;
-	width:980px;
-	margin: 0 auto;
-	margin-bottom:30px;
-}
+.shop-about { color: #000000; text-align: left; margin: 0 auto; margin-bottom: 30px; }
 
 .shop-about .col-1 { width: 570px; padding-right: 30px; float: left; border-right: 1px solid #ddd;}
-.shop-about .col-2 { width: 350px; float: right; }
+.shop-about .col-2 { width: 320px; float: right; }
 
 .shop-about h2 { font-size: 40px; color: #9a8781; }
 .shop-about h3 { color: #b3b3b3; margin-top: 10px;}
@@ -6215,8 +6209,8 @@ h1.products-block-header {
 .shop-about .text .logo { float: left; clear: left; }
 .shop-about .text p { float: right; width: 430px; color: #989898; line-height: 20px;}
 .shop-about .newsletter .form-holder { margin-top: 35px; }
-.shop-about .newsletter input[type="email"] { width: 80%; border: 1px solid #989083; padding: 5px 20px; box-sizing: border-box; font-size: 13px;}
-.shop-about .newsletter button { margin-top: 15px; width: 80%;  padding: 9px 20px; background-color: #776058; color: #fff; text-transform: uppercase; border: none; cursor: pointer;
+.shop-about .newsletter input[type="email"] { width: 100%; border: 1px solid #989083; padding: 5px 20px; box-sizing: border-box; font-size: 13px;}
+.shop-about .newsletter button { margin-top: 15px; width: 100%;  padding: 9px 20px; background-color: #776058; color: #fff; text-transform: uppercase; border: none; cursor: pointer;
 transition: all 200ms ease-in-out 0s;
 -webkit-transition: all 200ms ease-in-out 0s;
 -moz-transition: all 200ms ease-in-out 0s;
