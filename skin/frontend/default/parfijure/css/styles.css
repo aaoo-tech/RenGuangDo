@@ -6649,3 +6649,8 @@ transition: all 200ms ease-in-out 0s;
 .cms-contact-us-html .map .down-arrow .inner { width: 0; height: 0; border-left: 19px solid transparent; border-right: 19px solid transparent; border-top: 19px solid #fff; position: absolute; top: -21px; left: -19px; }
 .cms-contact-us-html .infos address { background: url('../images/icon-spot.jpg') 0 -3px no-repeat #fff; }
 .cms-contact-us-html .infos address { width: 48%; padding-left: 50px; box-sizing: border-box; line-height: 23px;}
+
+.cms-sales-point-html .page-title { color: #776058; }
+.sales-point-container { padding: 14px; border: 1px solid #dddddd; display: block; width: 100%; box-sizing: border-box; }
+.sales-point-container a { float: left; display: block; border: 1px solid #dddddd; margin: 10px 10px 10px 10px; }
+.sales-point-container a:hover { border: 1px solid #888; }
