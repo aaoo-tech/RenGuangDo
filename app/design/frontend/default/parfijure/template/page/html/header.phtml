@@ -22,6 +22,23 @@
                     <?php echo $this->getChildHtml('top_cart') ?>
                 </div>
             </div> -->
+            <div class="top-right-container">
+              <div class="links">
+                <?php if ($this->helper('customer')->isLoggedIn()): ?>
+                <a href="<?php echo $this->getUrl('customer/account/logout'); ?>" title="<?php echo $this->__('Logout'); ?>"><img src="<?php echo $this->getSkinUrl('images/icon-login.jpg');?>" alt="<?php echo $this->__('Logout'); ?>" /><?php echo $this->__('Logout'); ?></a>
+                <?php else: ?>
+                <a href="<?php echo $this->getUrl('customer/account/login'); ?>" title="<?php echo $this->__('Login'); ?>"><img src="<?php echo $this->getSkinUrl('images/icon-login.jpg');?>" alt="<?php echo $this->__('Login'); ?>" /><?php echo $this->__('Login'); ?></a>
+                <?php endif ?>
+                
+
+              </div>
+              <div class="links">
+                <a href="<?php echo $this->getUrl('customer/account'); ?>" title="<?php echo $this->__('My Account'); ?>"><img src="<?php echo $this->getSkinUrl('images/icon-account.jpg'); ?>" alt="<?php echo $this->__('My Account'); ?>" /><?php echo $this->__('My Account'); ?></a>
+              </div>
+              <div class="links">
+                <a href="<?php echo $this->getUrl('checkout/cart'); ?>" title="<?php echo $this->__('Cart'); ?>"><img src="<?php echo $this->getSkinUrl('images/icon-cart.jpg'); ?>" alt="<?php echo $this->__('Cart'); ?>" /><?php echo $this->__('Cart'); ?></a>
+              </div>
+            </div>
             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('top-navigation')->toHtml(); ?>
         </div>
         <div class="clear"></div>   
