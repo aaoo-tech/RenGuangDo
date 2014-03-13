@@ -99,7 +99,8 @@ p {
 	margin: 0 0 1em; font-size: 14px;
 }
 strong {
-	font-weight: bold;
+	font-weight: bold; 
+	font-size: 14px;
 }
 address {
 	font-style: normal;
@@ -3798,7 +3799,7 @@ span.currency-code {
 }
 .product-tabs li.active a, .product-tabs li:hover a {
 	background-color: white;
-	
+	font-size: 14px;
 	text-decoration: none;
 	color: #999;
 }
