@@ -101,7 +101,7 @@
     <div class="view-content">
         <div class="image">
             <a href="<?php echo $_product->getProductUrl() ?>" id="productimgover<?php echo $_product->getId()?>">
-            <img class="fade-image" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(210,130) ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>">
+            <img class="fade-image" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(130,210) ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>">
             </a>
         </div>
         <div class="name" id='productname<?php echo $_product->getId()?>'>

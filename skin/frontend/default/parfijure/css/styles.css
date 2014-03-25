@@ -96,7 +96,7 @@ caption, th, td {
 }
 
 p {
-	margin: 0 0 1em; font-size: 14px;
+	margin: 0 0 1em; font-size: 16px;
 }
 strong {
 	font-weight: bold; 
@@ -1517,7 +1517,7 @@ span.currency-code {
 	border: 1px solid #ddd;
 	padding: 0 20px;
 }
-.block-title h2 { margin: 0; font-size:18px; color: #888;	}
+.block-title h2 { margin: 0; font-size:22px; color: #888;	}
 .block-title h3 { font-size: 14px; color: #999;}
 .left-categorys-container a {
 	display: block;
@@ -1674,6 +1674,7 @@ span.currency-code {
 }
 
 .block .block-content a {
+	font-size: 16px;
 }
 .block .btn-remove, .block .btn-edit {
 	float: right;
@@ -6151,10 +6152,8 @@ h1.products-block-header {
 }
 
 .box-product-item .image {
-	
-	text-align:center;
-	
-	height: 130px;
+	text-align:center;	
+	height: 175px;
 	margin-top:8px;
 	margin-bottom: 20px;
 }
