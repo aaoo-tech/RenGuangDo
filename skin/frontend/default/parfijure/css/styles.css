@@ -95,9 +95,7 @@ caption, th, td {
 	font-weight: normal;
 }
 
-p {
-	margin: 0 0 1em; font-size: 16px;
-}
+p { margin: 0 0 1em; font-size: 14px; }
 strong {
 	font-weight: bold; 
 	font-size: 14px;
@@ -1645,7 +1643,7 @@ span.currency-code {
 .block .block-content {
 	padding: 20px 0;
 }
-.block .block-content p { line-height: 22px; }
+.block .block-content p { line-height: 22px; font-size: 16px; }
 .block .block-content li.item {
 	padding-bottom: 5px;
 	margin-bottom: 5px;
