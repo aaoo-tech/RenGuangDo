@@ -1517,7 +1517,7 @@ span.currency-code {
 	border: 1px solid #ddd;
 	padding: 0 20px;
 }
-.block-title h2 { margin: 0; font-size:22px; color: #888;	}
+.block-title h2 { margin: 0; font-size:20px; color: #888;	}
 .block-title h3 { font-size: 14px; color: #999;}
 .left-categorys-container a {
 	display: block;
@@ -1645,7 +1645,7 @@ span.currency-code {
 .block .block-content {
 	padding: 20px 0;
 }
-.block .block-content p { line-height: 22px; }
+.block .block-content p { line-height: 22px; font-size: 14px; }
 .block .block-content li.item {
 	padding-bottom: 5px;
 	margin-bottom: 5px;
@@ -1674,7 +1674,7 @@ span.currency-code {
 }
 
 .block .block-content a {
-	font-size: 16px;
+	font-size: 14px;
 }
 .block .btn-remove, .block .btn-edit {
 	float: right;
@@ -6153,7 +6153,7 @@ h1.products-block-header {
 
 .box-product-item .image {
 	text-align:center;	
-	height: 175px;
+	height: 190px;
 	margin-top:8px;
 	margin-bottom: 20px;
 }
@@ -6166,7 +6166,7 @@ h1.products-block-header {
 }
 
 .box-product-item .name a {
-	font-size:12px;
+	font-size:14px;
 	color: #000;
 	text-align:center;
 	text-decoration: none;
@@ -6206,7 +6206,7 @@ h1.products-block-header {
 .shop-about .col-1 { width: 570px; padding-right: 30px; float: left; border-right: 1px solid #ddd;}
 .shop-about .col-2 { width: 320px; float: right; }
 
-.shop-about h2 { font-size: 14px; color: #9a8781; margin-bottom: 20px;}
+.shop-about h2 { font-size: 20px; color: #9a8781; margin-bottom: 20px;}
 .shop-about h3 { color: #b3b3b3; margin-top: 10px;}
 
 .shop-about .text {
@@ -6215,7 +6215,8 @@ h1.products-block-header {
 	text-align:justify;
 }
 .shop-about .text .logo { float: left; clear: left; }
-.shop-about .text p { float: right; width: 430px; color: #989898; line-height: 20px;}
+.shop-about .text p { float: right; width: 430px; color: #989898; line-height: 20px; font-size: 14px; }
+
 .shop-about .newsletter .form-holder { margin-top: 35px; }
 .shop-about .newsletter input[type="email"] { width: 100%; border: 1px solid #989083; padding: 5px 20px; box-sizing: border-box; font-size: 13px;}
 .shop-about .newsletter button { margin-top: 15px; width: 100%;  padding: 9px 20px; background-color: #776058; color: #fff; text-transform: uppercase; border: none; cursor: pointer;
@@ -6656,7 +6657,7 @@ transition: all 200ms ease-in-out 0s;
 .cms-contact-us-html .map .down-arrow { position: absolute; bottom: -21px; left: 60px; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #ddd;}
 .cms-contact-us-html .map .down-arrow .inner { width: 0; height: 0; border-left: 19px solid transparent; border-right: 19px solid transparent; border-top: 19px solid #fff; position: absolute; top: -21px; left: -19px; }
 .cms-contact-us-html .infos address { background: url('../images/icon-spot.jpg') 0 -3px no-repeat #fff; }
-.cms-contact-us-html .infos address { width: 48%; padding-left: 50px; box-sizing: border-box; line-height: 23px;}
+.cms-contact-us-html .infos address { width: 48%; padding-left: 50px; box-sizing: border-box; line-height: 23px; font-size: 14px; }
 
 .cms-sales-point-html .page-title { color: #776058; }
 .sales-point-container { padding: 14px; border: 1px solid #dddddd; display: block; width: 100%; box-sizing: border-box; }
