@@ -200,7 +200,7 @@ ul, ol {
 	margin: 0 auto;
 	text-align: left;
 }
-.wrapper > .page:nth-of-type(1) { box-shadow: 0 10px 30px -3px #ddd; margin-bottom: 50px;}
+.wrapper > .page:nth-of-type(1) { /*box-shadow: 0 10px 30px -3px #ddd; margin-bottom: 50px;*/}
 
 .page-print {
 	background: #fff;
