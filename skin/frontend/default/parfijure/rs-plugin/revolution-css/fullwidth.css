@@ -15,6 +15,9 @@
   height: 446px;
 }
 
+.fullwidthbanner ul li img {
+  cursor: pointer;
+}
 
 .revolution_header1 {
   color:#ec5d4c;

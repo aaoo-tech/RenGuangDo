@@ -9,5 +9,10 @@
         $(this).find('.level2').hide();
       }
     );
+
+    // banner click
+    $('.fullwidthbanner ul li img').on('click', function() {
+      window.location = $(this).data('href');
+    });
   });
 })(jQuery);
