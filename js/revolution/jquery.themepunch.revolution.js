@@ -927,7 +927,6 @@
 		////////////////////////////////////////////////////////
 		function setSize(img,opt) {
 
-
 			opt.width=parseInt(opt.container.width(),0);
 			opt.height=parseInt(opt.container.height(),0);
 
@@ -969,11 +968,11 @@
 					var ffw = cow / img.data('orgw');
 
 
-					img.width(img.width()*ffh);
-					img.height(coh);
+					//img.width(img.width()*ffh);
+					//img.height(coh);
 
 					if (img.width()<cow) {
-						img.width(cow+50);
+						img.width(cow);
 						var ffw = img.width() / img.data('orgw');
 						img.height(img.data('orgh')*ffw);
 					}
