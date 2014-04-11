@@ -6651,6 +6651,7 @@ transition: all 200ms ease-in-out 0s;
 
 .cms-page-view .std { margin: 50px; }
 .cms-page-view h1 { color: #9c8983; }
+.cms-page-view .std p { line-height: 25px; }
 .cms-contact-us-html .map { border: 1px solid #ddd; padding: 25px; margin: 20px 0 40px; position: relative; }
 .cms-contact-us-html .map .down-arrow { position: absolute; bottom: -21px; left: 60px; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #ddd;}
 .cms-contact-us-html .map .down-arrow .inner { width: 0; height: 0; border-left: 19px solid transparent; border-right: 19px solid transparent; border-top: 19px solid #fff; position: absolute; top: -21px; left: -19px; }
