@@ -39,3 +39,4 @@ aside .widget-area > ul > li > ul a:hover { color: #746057; text-decoration: und
 .btn-action { display: block; background: #746057; color: #fff; padding: 5px 0; width: 50%; margin: 0 auto; border-radis: 5px; }
 
 .post .attachment-post-thumbnail { float: left; margin-right: 20px; width: 50%; height: auto; }
+.post .thumbnail .attachment-post-thumbnail { width: 100%; margin-right: 0; }
