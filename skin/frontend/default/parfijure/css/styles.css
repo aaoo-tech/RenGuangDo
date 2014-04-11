@@ -3243,6 +3243,7 @@ span.currency-code {
 }
 
 .product-view .product-img-box .more-views {
+	display: none;
 	margin: 10px auto 0;
 }
 .product-view .product-img-box .more-views h2 {
