@@ -28,6 +28,10 @@
 <div class="page-title">
     <h1><?php echo Mage::helper('contacts')->__('Cooperation') ?></h1>
 </div>
+<div class="fl" style="width: 31%;">
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('business-cooperation')->toHtml(); ?>
+</div>
+<div class="fr" style="width: 65%; border-left: 1px solid #ddd; padding-left: 2%;">
 <form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post">
     <div class="fieldset">
         <h2 class="legend"><?php echo Mage::helper('contacts')->__('Contact Information') ?></h2>
@@ -66,6 +70,7 @@
         <button type="submit" title="<?php echo Mage::helper('contacts')->__('Submit') ?>" class="button"><span><span><?php echo Mage::helper('contacts')->__('Submit') ?></span></span></button>
     </div>
 </form>
+</div>
 <script type="text/javascript">
 //<![CDATA[
     var contactForm = new VarienForm('contactForm', true);

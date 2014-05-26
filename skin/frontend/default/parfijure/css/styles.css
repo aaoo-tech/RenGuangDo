@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body {
-	font-family:"Microsoft YaHei", 黑体, Trebuchet MS, Arial;
+	font-family:"Microsoft YaHei", '微软雅黑', 黑体, Trebuchet MS, Arial;
 	font-size: 12px;
 	color: #818181;
 	text-align: center;
@@ -6662,3 +6662,7 @@ transition: all 200ms ease-in-out 0s;
 .sales-point-container { padding: 14px; border: 1px solid #dddddd; display: block; width: 100%; box-sizing: border-box; }
 .sales-point-container a { float: left; display: block; border: 1px solid #dddddd; margin: 10px 10px 10px 10px; }
 .sales-point-container a:hover { border: 1px solid #888; }
+
+.half { width: 49%; }
+.fl { float: left; }
+.fr { float: right; }
