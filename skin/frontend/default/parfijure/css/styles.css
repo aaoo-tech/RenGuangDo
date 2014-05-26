@@ -3559,8 +3559,9 @@ span.currency-code {
 	padding: 5px 30px 15px 0;
 	position: relative;
 	/* border-top: 1px solid #F5F5F5; */
-	margin-top:5px;
+	margin-top:10px;
 }
+.entry.product-options { margin-bottom: 10px; }
 
 .product-options .configurable-entry {}
 .product-options .configurable-entry label {
@@ -6666,3 +6667,6 @@ transition: all 200ms ease-in-out 0s;
 .half { width: 49%; }
 .fl { float: left; }
 .fr { float: right; }
+
+.product-options label { float: left; font-size: 14px; padding-top: 4px; }
+.product-options .value { border: 1px solid #000; padding: 3px 10px;  float: left; margin-left: 10px; }
