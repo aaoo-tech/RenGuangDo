@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body {
-	font-family:"Microsoft YaHei", 黑体, Trebuchet MS, Arial;
+	font-family:"Microsoft YaHei", '微软雅黑', 黑体, Trebuchet MS, Arial;
 	font-size: 12px;
 	color: #818181;
 	text-align: center;
@@ -1199,7 +1199,7 @@ tr.summary-details-excluded {
 	display: inline;
 	position: relative;
 }
-.top_links .links > li:after { content: '|'; padding: 0 18px;}
+.top_links .links > li:after { content: '|'; padding: 0 12px;}
 .top_links .links > li:last-child:after { content: ''; padding: 0; }
 .links > li.first {
 	padding-left: 0 !important;
@@ -3559,8 +3559,9 @@ span.currency-code {
 	padding: 5px 30px 15px 0;
 	position: relative;
 	/* border-top: 1px solid #F5F5F5; */
-	margin-top:5px;
+	margin-top:10px;
 }
+.entry.product-options { margin-bottom: 10px; }
 
 .product-options .configurable-entry {}
 .product-options .configurable-entry label {
@@ -6662,3 +6663,10 @@ transition: all 200ms ease-in-out 0s;
 .sales-point-container { padding: 14px; border: 1px solid #dddddd; display: block; width: 100%; box-sizing: border-box; }
 .sales-point-container a { float: left; display: block; border: 1px solid #dddddd; margin: 10px 10px 10px 10px; }
 .sales-point-container a:hover { border: 1px solid #888; }
+
+.half { width: 49%; }
+.fl { float: left; }
+.fr { float: right; }
+
+.product-options label { float: left; font-size: 14px; padding-top: 4px; }
+.product-options .value { border: 1px solid #000; padding: 3px 10px;  float: left; margin-left: 10px; }
