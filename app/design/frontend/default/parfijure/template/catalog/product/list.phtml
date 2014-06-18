@@ -116,7 +116,9 @@
     <div class="price clearfix">
     <?php echo $this->getPriceHtml($_product, true) ?>
 </div>
-
+<?php if (Mage::getResourceModel('catalog/product')->getAttributeRawValue($_product->getId(), 'sale_offline') === '1'): ?>
+<p class="product-tips"><?php echo $this->__('Not for sale online'); ?></p>
+<?php else: ?>
 <?php
                             $enable_ajax = themeOptions('enable_ajax');
                             
@@ -127,6 +129,7 @@
                                <div class="buttons-cart" onclick="<?php if($enable_ajax): ?>showOptions('<?php echo $_product->getId()?>')<?php else: ?>setLocation('<?php echo $this->getAddToCartUrl($_product) ?>','<?php echo $_product->getId()?>')<?php endif;?>"><?php echo $this->__('Add to Cart') ?></div>
                                 <a href='<?php echo $this->getUrl('ajax/index/options',array('product_id'=>$_product->getId()));?>' class='fancybox' id='fancybox<?php echo $_product->getId()?>' style="display: none;" ><?php echo $this->__('Add to Cart') ?></a>
                             <?php }  ?>
+<?php endif; ?>
                             
 
     <!-- <div class="box-product-buttons">

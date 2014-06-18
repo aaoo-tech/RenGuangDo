@@ -3376,7 +3376,6 @@ span.currency-code {
 .product-view .product-shop .short-description p:first-child {
 	margin: 0;
 	color: #090909;
-	text-transform: uppercase;
 }
 .product-view .product-shop .white-back {
 	float: left;
@@ -6670,3 +6669,6 @@ transition: all 200ms ease-in-out 0s;
 
 .product-options label { float: left; font-size: 14px; padding-top: 4px; }
 .product-options .value { border: 1px solid #000; padding: 3px 10px;  float: left; margin-left: 10px; }
+
+.box-product-item .product-tips { text-align: center; background: #EC5D4C; color: #fff; font-size: 14px; margin: 10px 30px; padding: 6px 10px; }
+.add-to-box .product-tips { color: #ec5d4c; }

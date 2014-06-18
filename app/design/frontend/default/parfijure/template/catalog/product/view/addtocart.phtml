@@ -1,6 +1,7 @@
 <?php $_product = $this->getProduct(); ?>
 <?php $buttonTitle = $this->__('Add to Cart'); ?>
-<?php if($_product->isSaleable()): ?>
+<?php $_sale_offline = (Mage::getResourceModel('catalog/product')->getAttributeRawValue($_product->getId(), 'sale_offline') === '1'); ?>
+<?php if($_product->isSaleable() && $_sale_offline === false): ?>
     <div class="add-to-cart">
         <?php if(!$_product->isGrouped()): ?>
         <div class="quanitybox">         
@@ -24,6 +25,8 @@
         <a class="buttons-compare" onclick="setLocation('<?php echo $this->getAddToCompareUrl($_product) ?>')">+ <?php echo $this->__('Compare') ?></a>
         <a class="buttons-wish" onclick="setLocation('<?php echo $this->getAddToWishlistUrl($_product) ?>')">+ <?php echo $this->__('Wishlist') ?></a>
     </div> -->
+<?php else: ?>
+<p class="product-tips"><?php echo $this->__('Not for sale online'); ?></p>
 <?php endif; ?>
 
 <script type="text/javascript">
