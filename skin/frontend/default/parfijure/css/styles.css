@@ -16,6 +16,13 @@ img {
 	border: 0;
 	vertical-align: top;
 }
+.cms-page-view .main-container a {
+	color: #7fb2f1 !important;
+}
+
+.main-container article.category-uncategorized a {
+	color: #7fb2f1 !important;	
+}
 a {
 	color: #7fb2f1;
 	text-decoration: none;
