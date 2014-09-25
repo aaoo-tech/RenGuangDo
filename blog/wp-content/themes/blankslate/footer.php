@@ -3,7 +3,7 @@
 </div>
 <?php 
 $ch = curl_init(); 
-curl_setopt($ch, CURLOPT_URL, "http://rgd.ecominfinity.com/");
+curl_setopt($ch, CURLOPT_URL, "http://www.renguangdo.com/");
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $_output = curl_exec($ch);

@@ -1349,7 +1349,7 @@ tr.summary-details-excluded {
 .top-right-container a:hover { opacity: 1; }
 
 .header .top_links .links > li:hover .level2 { visibility: visible; opacity: 1; transition: all 0.3s ease-in; }
-.header .top_links .links > li > a { color:#030303; font-size:16px; display: inline-block; }
+.header .top_links .links > li > a { color:#030303; font-size:14px; display: inline-block; }
 .header .top_links .links > li .level2 { opacity: 0; visibility: hidden; position: absolute; left: -32px; top: 13px; z-index: 1000; padding-top: 10px; /* box-shadow: #000 1px 1px 1px; */}
 .header .top_links .links > li .level2 ul { background: #fff; border: 1px solid #ddd; width: 200%; text-align: left; min-width: 130px; box-shadow: #ddd 1px 1px 1px;}
 .header .top_links .links > li .level2 ul > li:hover { }

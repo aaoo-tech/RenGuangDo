@@ -1,6 +1,9 @@
+<?php 
+$store_code_current = Mage::app()->getStore()->getCode();
 
+?>
 <div id="top"></div>
-
+<div style="display:none;"><?php echo $store_code_current; ?></div>
 
 <div class="header-container">
     <div class="header">
@@ -29,8 +32,6 @@
                 <?php else: ?>
                 <a href="<?php echo $this->getUrl('customer/account/login'); ?>" title="<?php echo $this->__('Login'); ?>"><img src="<?php echo $this->getSkinUrl('images/icon-login.jpg');?>" alt="<?php echo $this->__('Login'); ?>" /><?php echo $this->__('Login'); ?></a>
                 <?php endif ?>
-                
-
               </div>
               <div class="links">
                 <a href="<?php echo $this->getUrl('customer/account'); ?>" title="<?php echo $this->__('My Account'); ?>"><img src="<?php echo $this->getSkinUrl('images/icon-account.jpg'); ?>" alt="<?php echo $this->__('My Account'); ?>" /><?php echo $this->__('My Account'); ?></a>
@@ -38,6 +39,18 @@
               <div class="links">
                 <a href="<?php echo $this->getUrl('checkout/cart'); ?>" title="<?php echo $this->__('Cart'); ?>"><img src="<?php echo $this->getSkinUrl('images/icon-cart.jpg'); ?>" alt="<?php echo $this->__('Cart'); ?>" /><?php echo $this->__('Cart'); ?></a>
               </div>
+			  <div class="links">
+				<?php foreach (Mage::app()->getStores() as $_store):?>
+					<?php if ($_store->getCode() == 'tch'):?>
+						<a <?php if ($store_code_current == 'tch') echo "style='font-weight:bold;'" ?>href="<?php echo $_store->getCurrentUrl(); ?>"><?php echo $this->__('繁體中文');?></a> / 
+					<?php endif;?>
+				<?php endforeach;?>
+				<?php foreach (Mage::app()->getStores() as $_store):?>
+					<?php if ($_store->getCode() == 'en'):?>
+						<a <?php if ($store_code_current == 'en') echo "style='font-weight:bold;'" ?> href="<?php echo $_store->getCurrentUrl(); ?>"><?php echo $this->__('English');?></a>
+					<?php endif;?>
+				<?php endforeach; ?>
+			  </div>
             </div>
             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('top-navigation')->toHtml(); ?>
         </div>
