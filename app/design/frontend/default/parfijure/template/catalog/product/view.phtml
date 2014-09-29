@@ -20,11 +20,12 @@
         <div id='productname' style='display:none'><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></div>
 
         <div itemscope itemtype="product">
-            <meta itemprop="brand" content="renguangdo">
+            <meta itemprop="brand" content="RenGuangDo">
             <meta itemprop="identifier" content="<?php echo $_product->getSku(); ?>">
-            <div class="product-img-box">
-                <?php echo $this->getChildHtml('media') ?>
-            </div>
+            
+                <span itemprop="image"><div class="product-img-box"><?php echo $this->getChildHtml('media') ?></div></span>
+                
+         
         
             <div class="product-shop">
                 <div class="white-back">
@@ -33,11 +34,13 @@
                     </div>
                     <div itemprop="offers" itemscope itemtype="offer">
                         <meta itemprop="priceCurrency" content="<?php echo Mage::app()->getStore()->getCurrentCurrencyCode(); ?>">
-                        
+                        <meta itemprop="availability" content="in_stock">
+                        <meta itemprop="identifier" content="<?php echo $_product->getSku(); ?>">
+                         <meta itemprop="category" content="<?php echo Mage::registry('current_category')->getName();?>">
                         
                         <?php // echo $this->getReviewsSummaryHtml($_product, false, true)?>
-                        <?php // echo $this->getChildHtml('alert_urls') ?>
                         <?php // echo $this->getChildHtml('extrahint') ?>
+                        <?php // echo $this->getChildHtml('alert_urls') ?>
                         <?php if($_product->getTypeId() != 'bundle'): ?>
                         <?php echo $this->getPriceHtml($_product); ?>
                         <?php else: ?>
