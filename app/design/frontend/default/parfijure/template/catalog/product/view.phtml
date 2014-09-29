@@ -2,14 +2,13 @@
 <?php $_product = $this->getProduct(); ?>
 <?php $_layout = themeOptions('layout'); ?>
 <?php $enable_ajax = themeOptions('enable_ajax'); ?>
-
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
 <a class="back-to" href="javascript: history.go(-1)"><?php echo $this->__('Return to Previous Page') ?></a>
         
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
-<div class="product-view layout_<?php echo $_layout ?>">
+<div class="product-view layout_<?php echo $_layout ?>"> 
     <div class="product-essential">
     <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
         <div class="no-display">
@@ -20,65 +19,81 @@
         <div id='added' style='display:none'></div>
         <div id='productname' style='display:none'><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></div>
 
-        <div class="product-img-box">
-            <?php echo $this->getChildHtml('media') ?>
-        </div>
-        
-        <div class="product-shop">
-            <div class="white-back">
-                <div class="product-name">
-                    <h2><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h2>
-                </div>
-                
-                <?php // echo $this->getReviewsSummaryHtml($_product, false, true)?>
-                <?php // echo $this->getChildHtml('alert_urls') ?>
-                <?php // echo $this->getChildHtml('extrahint') ?>
-                <?php if($_product->getTypeId() != 'bundle'): ?>
-                    <?php echo $this->getPriceHtml($_product) ?>
-                <?php else: ?>
-                    <?php echo $this->__('Product code:').'<strong>'.$_product->getId().'</strong>'; ?>
-                    <?php echo $this->getChildHtml('product_type_data') ?>
-                <?php endif;?>
-                
-                <!--<div class="addtocont">
-                    <?php if($_product->getTypeId() != 'bundle'): ?>
-                        <span class="product-code"><?php echo $this->__('Product code:').' <strong>'.$_product->getId().'</strong>'; ?></span>
-                        <?php echo $this->getChildHtml('product_type_data') ?>
-                    <?php endif;?>
-                </div>-->
-
-                <div class="clear"></div>
-                <?php echo $this->getTierPriceHtml(); ?>
-                <?php if ($_product->getShortDescription()):?>
-                    <div class="short-description">
-                        <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                    </div>
-                <?php endif;?>
-                <?php if(themeOptions('use_share')) { echo '<div class="review">'.themeOptions('share_code').'</div>'; } ?>
-                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <div id="container2"><?php echo $this->getChildChildHtml('container2', '', true, true) ?></div>
-                <?php endif;?>
-                
-                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <div id="container1"><?php echo $this->getChildChildHtml('container1', '', true, true) ?><div class="clear"></div></div>
-                <?php endif;?>   
-<?php if ($_product->getData('type_id') === 'simple'): ?>
-<div class="entry product-options">
-    <label><?php echo $this->__("Capacity"); ?>: </label>
-	<div class="value"><?php echo $_product->getResource()->getAttribute('bottle_size')->getFrontend()->getValue($_product); ?></div>
-</div>
-<?php endif;?>
-                <?php echo $this->getChildHtml('product_type_data_grouped') ?>
-                <?php if (!$this->hasOptions()):?>
-                    <div class="add-to-box">
-                        <?php if($_product->isSaleable()): ?>
-                            <?php echo $this->getChildHtml('addtocart') ?>
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>  
-               
-                <?php echo $this->getChildHtml('other');?>
+        <div itemscope itemtype="product">
+            <meta itemprop="brand" content="renguangdo">
+            <meta itemprop="identifier" content="<?php echo $_product->getSku(); ?>">
+            <div class="product-img-box">
+                <?php echo $this->getChildHtml('media') ?>
             </div>
+        
+            <div class="product-shop">
+                <div class="white-back">
+                    <div class="product-name">
+                        <span itemprop="name"><h2><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h2></span>
+                    </div>
+                    <div itemprop="offers" itemscope itemtype="offer">
+                        <meta itemprop="priceCurrency" content="<?php echo Mage::app()->getStore()->getCurrentCurrencyCode(); ?>">
+                        
+                        
+                        <?php // echo $this->getReviewsSummaryHtml($_product, false, true)?>
+                        <?php // echo $this->getChildHtml('alert_urls') ?>
+                        <?php // echo $this->getChildHtml('extrahint') ?>
+                        <?php if($_product->getTypeId() != 'bundle'): ?>
+                        <?php echo $this->getPriceHtml($_product); ?>
+                        <?php else: ?>
+                            <?php echo $this->__('Product code:').'<strong>'.$_product->getId().'</strong>'; ?>
+                            <?php echo $this->getChildHtml('product_type_data') ?>
+                        <?php endif;?>
+                    </div>
+                    
+                    
+                    <!--<div class="addtocont">
+                        <?php if($_product->getTypeId() != 'bundle'): ?>
+                            <span class="product-code"><?php echo $this->__('Product code:').' <strong>'.$_product->getId().'</strong>'; ?></span>
+                            <?php echo $this->getChildHtml('product_type_data') ?>
+                        <?php endif;?>
+                    </div>-->
+
+                    <div class="clear"></div>
+                    <?php echo $this->getTierPriceHtml(); ?>
+                    <?php if ($_product->getShortDescription()):?>
+                    <span itemprop="description">
+                        <div class="short-description">
+                            <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description')?></div>
+                        </div>
+                     </span>   
+                    <?php endif;?>
+                    <?php if(themeOptions('use_share')) { echo '<div class="review">'.themeOptions('share_code').'</div>'; } ?>
+                    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <div id="container2"><?php echo $this->getChildChildHtml('container2', '', true, true) ?></div>
+                    <?php endif;?>
+                    
+                    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <div id="container1"><?php echo $this->getChildChildHtml('container1', '', true, true) ?><div class="clear"></div></div>
+                    <?php endif;?>   
+                     <?php if ($_product->getData('type_id') === 'simple'): ?>
+                    <div class="entry product-options">
+                        <label><?php echo $this->__("Capacity"); ?>: </label>
+                        <div class="value"><?php echo $_product->getResource()->getAttribute('bottle_size')->getFrontend()->getValue($_product); ?></div>
+                    </div>
+                    <?php endif;?>
+                    <?php echo $this->getChildHtml('product_type_data_grouped') ?>
+                    <?php if (!$this->hasOptions()):?>
+                        <div class="add-to-box">
+                            <?php if($_product->isSaleable()): ?>
+                                <?php echo $this->getChildHtml('addtocart') ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>  
+                   
+                    <?php echo $this->getChildHtml('other');?>
+                </div>
+
+            
+        </div>
+
+
+        
             <?php if (false): ?>
             <div class="product_right">
     		    <?php if(themeOptions('upsell_position') == 0): ?>
