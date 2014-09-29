@@ -22,7 +22,7 @@
     #zoom-window { left: <?php echo $_zoomLeft ?>px; width: <?php echo $_zoomWidth ?>px; }
 </style>
 <div class="zoom-container layout_default">
-    
+    <meta itemprop="image" content="<?php echo  $this->helper('catalog/image')->init($_product, 'image')->resize($_mainWidth,$_mainHeight); ?>">    
     <?php include('labels.phtml') ?>
     <div class="main-image" >   
         <a id="zoom" class="<?php if(!$use_zoom): ?> lightbox<?php endif;?> main-thumbnail" href="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>">
