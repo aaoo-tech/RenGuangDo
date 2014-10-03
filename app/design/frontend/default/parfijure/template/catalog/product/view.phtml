@@ -22,8 +22,10 @@
         <div itemscope itemtype="product">
             <meta itemprop="brand" content="RenGuangDo">
             <meta itemprop="identifier" content="<?php echo $_product->getSku(); ?>">
+			<?php $_category = $_product->getCategoryCollection()->addAttributeToSelect('*')->getFirstItem(); ?>
+			<meta itemprop="category" content="<?php echo $_category->getName(); ?>">
             
-                <span itemprop="image"><div class="product-img-box"><?php echo $this->getChildHtml('media') ?></div></span>
+            <div class="product-img-box"><?php echo $this->getChildHtml('media') ?>
                 
          
         
